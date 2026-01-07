@@ -1,5 +1,6 @@
 import { useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
+import { AlertCircle } from "lucide-react";
 
 export default function Login() {
   const navigate = useNavigate();
@@ -65,8 +66,12 @@ export default function Login() {
         </p>
 
         {error && (
-          <div className="bg-red-100 border border-red-400 text-red-700 px-4 py-2 rounded-lg mb-4">
-            {error}
+          <div className="bg-red-50 border-l-4 border-red-600 text-red-700 px-4 py-3 rounded-lg mb-4 flex items-start gap-3">
+            <AlertCircle className="h-5 w-5 shrink-0 mt-0.5 text-red-600" />
+            <div>
+              <p className="font-semibold text-sm">Error Login</p>
+              <p className="text-sm mt-1">{error}</p>
+            </div>
           </div>
         )}
 
@@ -80,7 +85,9 @@ export default function Login() {
               required
               value={email}
               onChange={(e) => setEmail(e.target.value)}
-              className="w-full px-3 py-2 border rounded-lg"
+              className={`w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring ${
+                error ? "border-red-500 focus:ring-red-300" : "border-gray-300 focus:ring-red-300"
+              }`}
               placeholder="kasir@posfy.com atau owner@posfy.com"
             />
           </div>
@@ -94,14 +101,16 @@ export default function Login() {
               required
               value={password}
               onChange={(e) => setPassword(e.target.value)}
-              className="w-full px-3 py-2 border rounded-lg"
+              className={`w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring ${
+                error ? "border-red-500 focus:ring-red-300" : "border-gray-300 focus:ring-red-300"
+              }`}
               placeholder="123456"
             />
           </div>
 
           <button
             type="submit"
-            className="w-full bg-red-600 text-white py-2 rounded-lg hover:bg-red-700"
+            className="w-full bg-red-600 text-white py-2 rounded-lg hover:bg-red-700 font-medium transition"
           >
             Login
           </button>
