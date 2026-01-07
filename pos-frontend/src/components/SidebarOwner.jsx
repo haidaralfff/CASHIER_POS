@@ -1,10 +1,10 @@
 import { NavLink, useNavigate } from "react-router-dom";
 import {
   LayoutDashboard,
+  ShoppingCart,
   FileText,
-  Package,
-  Boxes,
-  Users,
+  BarChart3,
+  Settings,
   LogOut,
   Briefcase
 } from "lucide-react";
@@ -39,28 +39,28 @@ export default function SidebarOwner() {
           <span>Dashboard</span>
         </NavLink>
 
+        {/* Manajemen Barang */}
+        <NavLink to="/owner/barang" className={linkClass}>
+          <ShoppingCart className="h-5 w-5 shrink-0" />
+          <span>Manajemen Barang</span>
+        </NavLink>
+
+        {/* Data Transaksi */}
+        <NavLink to="/owner/transaksi" className={linkClass}>
+          <FileText className="h-5 w-5 shrink-0" />
+          <span>Data Transaksi</span>
+        </NavLink>
+
         {/* Laporan */}
         <NavLink to="/owner/laporan" className={linkClass}>
-          <FileText className="h-5 w-5 shrink-0" />
+          <BarChart3 className="h-5 w-5 shrink-0" />
           <span>Laporan</span>
         </NavLink>
 
-        {/* Produk */}
-        <NavLink to="/owner/produk" className={linkClass}>
-          <Package className="h-5 w-5 shrink-0" />
-          <span>Produk</span>
-        </NavLink>
-
-        {/* Stok */}
-        <NavLink to="/owner/stok" className={linkClass}>
-          <Boxes className="h-5 w-5 shrink-0" />
-          <span>Stok</span>
-        </NavLink>
-
-        {/* User Management */}
-        <NavLink to="/owner/users" className={linkClass}>
-          <Users className="h-5 w-5 shrink-0" />
-          <span>User Management</span>
+        {/* Settings */}
+        <NavLink to="/owner/settings" className={linkClass}>
+          <Settings className="h-5 w-5 shrink-0" />
+          <span>Settings</span>
         </NavLink>
 
         {/* Logout */}

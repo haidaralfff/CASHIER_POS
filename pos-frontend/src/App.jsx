@@ -13,10 +13,10 @@ import KasirSettings from "./pages/kasir/Settings";
 // Owner
 import OwnerLayout from "./layout/OwnerLayout";
 import OwnerDashboard from "./pages/owner/Dashboard";
-import Produk from "./pages/owner/Produk";
-import Stok from "./pages/owner/Stok";
+import ManajemenBarang from "./pages/owner/ManajemenBarang";
+import DataTransaksi from "./pages/owner/DataTransaksi";
 import Laporan from "./pages/owner/Laporan";
-import UserManagement from "./pages/owner/UserManagement";
+import OwnerSettings from "./pages/owner/Settings";
 
 // Protected
 import ProtectedRole from "./pages/protected role/ProtectedRole";
@@ -60,10 +60,10 @@ export default function App() {
           }
         >
           <Route path="dashboard" element={<OwnerDashboard />} />
-          <Route path="produk" element={<Produk />} />
-          <Route path="stok" element={<Stok />} />
+          <Route path="barang" element={<ManajemenBarang />} />
+          <Route path="transaksi" element={<DataTransaksi />} />
           <Route path="laporan" element={<Laporan />} />
-          <Route path="users" element={<UserManagement />} />
+          <Route path="settings" element={<OwnerSettings />} />
         </Route>
 
         {/* NOT FOUND */}
