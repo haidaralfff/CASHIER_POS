@@ -62,7 +62,7 @@ export default function Login() {
 
         <h1 className="text-2xl font-bold text-center mb-2">Login</h1>
         <p className="text-center text-gray-500 mb-6">
-          Masuk ke aplikasi
+          SmartPos
         </p>
 
         {error && (
@@ -115,12 +115,6 @@ export default function Login() {
             Login
           </button>
         </form>
-
-        <div className="mt-4 text-xs text-gray-500">
-          <p className="font-semibold mb-2">Demo Credentials:</p>
-          <p>👨‍💼 Kasir: kasir@posfy.com / 123456</p>
-          <p>👔 Owner: owner@posfy.com / 123456</p>
-        </div>
       </div>
     </div>
   );
